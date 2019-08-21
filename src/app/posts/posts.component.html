@@ -1,0 +1,9 @@
+<div *ngFor="let item of (posts$ | async)" class="card">
+    <div class="card-header">
+        <div>{{item.id}}</div>
+        <div>{{item.title}}</div>
+    </div>
+    <div class="card-body">
+        <div>{{item.body}}</div>
+    </div>
+</div>
