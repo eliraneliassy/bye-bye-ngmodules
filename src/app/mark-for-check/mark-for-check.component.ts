@@ -5,8 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 @Component({
   selector: 'app-mark-for-check',
   templateUrl: './mark-for-check.component.html',
-  styleUrls: ['./mark-for-check.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./mark-for-check.component.scss']
 })
 export class MarkForCheckComponent {
 

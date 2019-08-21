@@ -13,6 +13,10 @@ export class FeatureComponent implements OnInit {
   ngOnInit() {
 
   }
-  
+
+  loadCounter() {
+
+  }
+
 
 }

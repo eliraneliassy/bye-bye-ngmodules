@@ -30,7 +30,7 @@ import { ChildComponent } from './mark-for-check/child/child.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CounterModule,
+    // CounterModule,
     HttpClientModule
   ],
   providers: [],

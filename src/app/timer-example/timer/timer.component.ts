@@ -1,9 +1,11 @@
 import { Component, OnInit, ɵmarkDirty, OnDestroy } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
-import { Unsubscription } from '../unsubsribce.hoc';
+
+import { tap } from 'rxjs/operators';
 
 
-@Unsubscription(['counterSubs'])
+
+
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
@@ -17,7 +19,9 @@ export class TimerComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    this.counterSubs = timer(0, 1000).subscribe(c => {
+    this.counterSubs = timer(0, 1000)
+    .pipe(tap(console.log))
+    .subscribe(c => {
       this.counter = c;
     });
   }

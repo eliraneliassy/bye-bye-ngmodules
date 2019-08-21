@@ -1,12 +1,11 @@
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef, ɵmarkDirty } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
 
