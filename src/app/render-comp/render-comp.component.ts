@@ -9,7 +9,8 @@ import { Component, OnInit, ɵrenderComponent, Injector, ɵɵdirectiveInject, IN
 export class RenderCompComponent implements OnInit {
 
   ngOnInit() {
-    
+    const injector = ɵɵdirectiveInject(INJECTOR);
+    // ɵrenderComponent(CounterComponent, { host: 'my-host', injector });
   }
 
 }

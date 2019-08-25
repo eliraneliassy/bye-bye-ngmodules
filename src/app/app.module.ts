@@ -31,7 +31,7 @@ import { CounterModule } from './counter/counter.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CounterModule,
+    // CounterModule,
     HttpClientModule
   ],
   providers: [],

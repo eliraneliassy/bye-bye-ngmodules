@@ -14,5 +14,11 @@ export class FeatureComponent implements OnInit {
 
   }
 
+  loadCounter() {
+    import('../../counter/counter.component').then((c) => {
+      ɵrenderComponent(c.CounterComponent, { host: 'my-host', injector: this.injector });
+    });
+  }
+
 
 }

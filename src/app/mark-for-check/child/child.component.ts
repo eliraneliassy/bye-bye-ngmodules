@@ -6,6 +6,7 @@ import { ChangeDetectionStrategy } from '@angular/core';
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChildComponent implements OnInit {
 
@@ -17,6 +18,7 @@ export class ChildComponent implements OnInit {
   ngOnInit() {
     this.data.subscribe(numbers => {
       this.numbers = [...this.numbers, ...numbers];
+      ɵmarkDirty(this);
     });
 
   }

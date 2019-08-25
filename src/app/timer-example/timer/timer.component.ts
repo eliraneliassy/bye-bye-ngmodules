@@ -2,8 +2,10 @@ import { Component, OnInit, ɵmarkDirty, OnDestroy } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 
 import { tap } from 'rxjs/operators';
+import { Unsubscriber } from '../unsubsribce.hoc';
 
 
+@Unsubscriber(['counterSubscription'])
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
