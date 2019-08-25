@@ -4,8 +4,6 @@ import { Subscription, timer } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 
-
-
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',

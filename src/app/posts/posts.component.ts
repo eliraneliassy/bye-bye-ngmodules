@@ -10,13 +10,10 @@ import { Observable } from 'rxjs';
 export class PostsComponent implements OnInit {
 
   posts$: Observable<Post[]>;
-
-  posts: Post[];
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.posts$ = this.httpClient.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
-    // this.posts$.subscribe(res => this.posts = res);
   }
 }
 

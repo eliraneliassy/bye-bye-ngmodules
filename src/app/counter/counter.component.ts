@@ -16,11 +16,11 @@ import { Component, OnInit, Input, Output, EventEmitter, ɵdetectChanges, ɵɵdi
 })
 export class CounterComponent {
 
-  constructor(private storageService: StorageService) { }
   @Input() counter = 0;
   @Output() counterReset: EventEmitter<void> = new EventEmitter<void>();
-  plus() { this.counter++; ɵdetectChanges(this); }
-  reset() { this.counter = 0; ɵdetectChanges(this); }
-  save() { this.storageService.saveCounter(this.counter); }
+  plus() { this.counter++; }
+  reset() { this.counter = 0; }
+
+
 
 }

@@ -13,7 +13,10 @@ const routes: Routes = [
   { path: 'posts', component: PostsComponent },
   { path: 'timer', component: TimerExampleComponent },
   { path: 'cd', component: MarkForCheckComponent },
-  { path: 'dynamic-import', loadChildren: () => import('./feature/feature.module').then((m) => m.FeatureModule) }
+  {
+    path: 'dynamic-import',
+    loadChildren: () => import('./feature/feature.module').then((m) => m.FeatureModule)
+  }
 ];
 
 @NgModule({

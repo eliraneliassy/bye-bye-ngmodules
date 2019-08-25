@@ -8,13 +8,9 @@ import { Component, OnInit, ɵrenderComponent, ɵɵdirectiveInject, INJECTOR, In
 })
 export class FeatureComponent implements OnInit {
 
-  constructor() { }
+  constructor(private injector: Injector) { }
 
   ngOnInit() {
-
-  }
-
-  loadCounter() {
 
   }
 
