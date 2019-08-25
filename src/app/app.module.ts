@@ -13,6 +13,7 @@ import { RenderCompComponent } from './render-comp/render-comp.component';
 import { PushPipe } from './push.pipe';
 import { MarkForCheckComponent } from './mark-for-check/mark-for-check.component';
 import { ChildComponent } from './mark-for-check/child/child.component';
+import { CounterModule } from './counter/counter.module';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { ChildComponent } from './mark-for-check/child/child.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // CounterModule,
+    CounterModule,
     HttpClientModule
   ],
   providers: [],

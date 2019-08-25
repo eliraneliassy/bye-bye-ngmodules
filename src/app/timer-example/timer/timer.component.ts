@@ -11,13 +11,13 @@ import { tap } from 'rxjs/operators';
 })
 export class TimerComponent implements OnInit, OnDestroy {
 
-  private counterSubs: Subscription;
+  private counterSubscription: Subscription;
   public counter: number;
 
   constructor() { }
 
   ngOnInit() {
-    this.counterSubs = timer(0, 1000)
+    this.counterSubscription = timer(0, 1000)
     .pipe(tap(console.log))
     .subscribe(c => {
       this.counter = c;
