@@ -21,7 +21,7 @@ export class CounterComponent {
   @Input() counter = 0;
   @Output() counterReset: EventEmitter<void> = new EventEmitter<void>();
   plus() { this.counter++; ɵdetectChanges(this); }
-  reset() { this.counter = 0; ɵdetectChanges(this); }
+  reset() { this.counter = 0; this.counterReset.emit(); ɵdetectChanges(this); }
   save() { this.storageService.saveCounter(this.counter); }
 
 
