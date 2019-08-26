@@ -19,8 +19,6 @@ export class CounterComponent {
   @Input() counter = 0;
   @Output() counterReset: EventEmitter<void> = new EventEmitter<void>();
   plus() { this.counter++; }
-  reset() { this.counter = 0; }
-
-
+  reset() { this.counter = 0; this.counterReset.emit(); }
 
 }
