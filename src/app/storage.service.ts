@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -6,14 +7,9 @@ import { Injectable } from '@angular/core';
 })
 export class StorageService {
 
-  LOCAL_STORAGE_KEY = '__COUNTER__';
+  constructor(private httpClient: HttpClient) { }
 
-  constructor(private httpClient: HttpClient) {}
-
-  saveCounter(count: number) {
-    localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(count));
-  }
-  getCounter(counter: number) {
-    JSON.parse(localStorage.getItem(this.LOCAL_STORAGE_KEY));
+  saveCounter(counter: number) {
+    return this.httpClient.post('SOME_FAKE_URL', { counter });
   }
 }
